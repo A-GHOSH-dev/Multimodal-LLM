@@ -1,0 +1,7 @@
+OpenAI embeddings allow the platform to determine the relationship between words. As a result, it can figure out which words relate to your query and use them to produce results. That is why embeddings are a vital part of AI chatbots. They enable AI bots to “understand” user queries so that OpenAI embeddings can make or break them. ChatGPT works thanks to the large language model GPT-4. It contains a massive database of words that it classifies into numerous categories. Search: Embeddings rank queries by relevance.
+Clustering: Embeddings group text strings by similarity.
+Recommendations: OpenAI embeddings recommend related text strings.
+Anomaly detection: Embeddings identify words with minimal relatedness.
+Diversity measurement: Embeddings analyze how similarities spread among multiple words.
+Classification: OpenAI embeddings classify text strings by their most similar label.
+FAISS is a library for efficient similarity search and clustering of dense vectors. In this context, it could be used to find similar text chunks or documents based on the generated embeddings.

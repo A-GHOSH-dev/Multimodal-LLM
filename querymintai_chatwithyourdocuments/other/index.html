@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title> LLM Website</title>
+</head>
+<body>
+
+<form action="/answer" method="GET">
+    <input type="text" name="question"> 
+    <input type="submit">
+</form>
+
+<!-- Display the answer using Jinja templating -->
+<p>{{ answer|safe }}</p>
+
+
+</body>
+</html>

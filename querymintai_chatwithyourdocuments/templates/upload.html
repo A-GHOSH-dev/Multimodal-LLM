@@ -1,0 +1,61 @@
+<!-- templates/upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueryMintAI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            background-image: url('https://wallpaperaccess.com/full/4274912.jpg');
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="file"] {
+            margin-bottom: 20px;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat with your own Documents Bot</h1>
+        <h3>Users can upload PDFs, Word documents, TXT files, or CSVs, effectively turning them into interactive databases. The Chatbot employs LLMs to understand natural language queries, extracting pertinent information from the uploaded documents and providing precise answers.</h3>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="file">Select a Document file:</label>
+            <input type="file" id="file" name="file" accept=".pdf" multiple><br>
+            <label for="question">Type your question:</label>
+            <input type="text" id="question" name="question" required style="width: 700px; height: 100px;"><br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if response %}
+        <h2>Response:</h2>
+        <pre>{{ response }}</pre>
+        {% endif %}
+    </div>
+</body>
+</html>
