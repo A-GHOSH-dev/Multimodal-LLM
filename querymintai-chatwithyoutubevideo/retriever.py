@@ -20,7 +20,8 @@ os.environ["OPENAI_API_KEY"] = config("OPENAI_API_KEY")
 
 try:
     # get URL
-    url = ["https://www.youtube.com/watch?v=wNOs3LlsH6k"]
+    # url = ["https://www.youtube.com/watch?v=wNOs3LlsH6k"]
+    url = ["http://192.168.43.38/800x600.jpg"]
     if local:
         loader = GenericLoader(YoutubeAudioLoader(
             urls=url,
